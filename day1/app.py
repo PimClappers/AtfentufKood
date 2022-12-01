@@ -5,7 +5,7 @@ def main():
 	elves = []
 	for line in lines:
 	    print(line)	    
-	    if line != "\n":
+	    if line != "" and line != "\n":
 	    	value = int(line)
 	    	sum += value
 	    else:
