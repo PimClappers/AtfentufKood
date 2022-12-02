@@ -24,39 +24,27 @@ for line in lines:
 
 totalpoints = 0
 for i in range(len(oponents)):
-	points = 0
 	if oponents[i] == ROCKo:
 		if outcomes[i] == OUTCOMEw:
-			points += PAPERp
-			points += WIN
+			totalpoints += PAPERp + WIN
 		if outcomes[i] == OUTCOMEd:
-			points += ROCKp
-			points += DRAW
+			totalpoints += ROCKp + DRAW
 		if outcomes[i] == OUTCOMEl:
-			points += SCISSORSp
-			points += LOSE
+			totalpoints += SCISSORSp + LOSE
 
 	if oponents[i] == PAPERo:
 		if outcomes[i] == OUTCOMEw:
-			points += SCISSORSp
-			points += WIN
+			totalpoints += SCISSORSp + WIN
 		if outcomes[i] == OUTCOMEd:
-			points += PAPERp
-			points += DRAW
+			totalpoints += PAPERp + DRAW
 		if outcomes[i] == OUTCOMEl:
-			points += ROCKp
-			points += LOSE
+			totalpoints += ROCKp + LOSE
 
 	if oponents[i] == SCISSORSo:
 		if outcomes[i] == OUTCOMEw:
-			points += ROCKp
-			points += WIN
+			totalpoints += ROCKp + WIN
 		if outcomes[i] == OUTCOMEd:
-			points += SCISSORSp
-			points += DRAW
+			totalpoints += SCISSORSp + DRAW
 		if outcomes[i] == OUTCOMEl:
-			points += PAPERp
-			points += LOSE
-	totalpoints += points
-print(totalpoints)
-
+			totalpoints += PAPERp + LOSE
+print("Total: " + str(totalpoints))

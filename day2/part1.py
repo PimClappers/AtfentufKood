@@ -1,4 +1,4 @@
-lines = open("input2.txt").readlines();
+lines = open("input.txt").readlines();
 oponents = []
 responses = []
 
@@ -53,5 +53,4 @@ for i in range(len(oponents)):
 			points += 3
 			points += DRAW
 	totalpoints += points
-print(totalpoints)
-
+print("Total: " + str(totalpoints))
