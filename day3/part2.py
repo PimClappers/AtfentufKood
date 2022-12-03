@@ -2,7 +2,7 @@ priorityList = open("alphabet.txt").read()
 lines = open("input.txt").readlines()
 totalPriority = 0
 for i in range(len(lines)):
-    if (i % 3 != 0):
+    if (i % 3):
         continue
     line = lines[i]
     for j in range(len(line)):
