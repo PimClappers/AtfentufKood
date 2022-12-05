@@ -46,7 +46,6 @@ for command in commands:
 	toStack = stacks[command[2] - 1]
 	ogLength = len(toStack)
 	while len(toStack) <= (ogLength + times):
-		# for n in range(len(toStack) + times - len(toStack)):
 		toStack.append("o")
 	for i in range(times):
 		toStack[findTopIndex(toStack)+(times-i)] = fromStack[findTopIndex(fromStack)]
