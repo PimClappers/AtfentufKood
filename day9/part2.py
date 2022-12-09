@@ -1,4 +1,4 @@
-commands = open("input.txt").read().split("\n")
+commands = open("input3.txt").read().split("\n")
 
 UP = 'U'
 DOWN = 'D'
@@ -143,7 +143,9 @@ while y >= lowestY:
 			if (location == visitedPlace):
 				match = True
 				break
-		if (match):
+		if (location == [0, 0]):
+			print("s", end="")
+		elif (match):
 			print("#", end="")
 		else:
 			print(".", end="")
@@ -151,7 +153,4 @@ while y >= lowestY:
 	y -= 1
 	print()
 
-# print(knotPositions)
-# print(Tposition)
-# print(visited)
 print(len(visited))
