@@ -97,6 +97,4 @@ while y >= lowestY:
 	y -= 1
 	print()
 
-print(Hposition)
-print(Tposition)
 print(len(visited))
