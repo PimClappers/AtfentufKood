@@ -17,9 +17,9 @@ def drawPixels():
     global value
     global currentPixel
     if (currentPixel == value or currentPixel == value - 1 or currentPixel == value + 1):
-        print("#", end="")
+        print("0", end="")
     else:
-        print(".", end="")
+        print(" ", end="")
     currentPixel += 1
     if (currentPixel > 39):
         print()
