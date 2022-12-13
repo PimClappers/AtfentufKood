@@ -83,6 +83,9 @@ for y in range(len(lines)):
 			currentNode = node.GetId()
 			node.SetScore(0)
 			node.SetLetter("a")
+		if (node.GetLetter() == "a"):
+			currentNode = node.GetId()
+			node.SetScore(0)
 		unvisitedNodes.append(node)
 		nodeCounter += 1
 
