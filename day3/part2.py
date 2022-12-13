@@ -1,4 +1,4 @@
-priorityList = open("alphabet.txt").read()
+priorityList = open("../libs/alphabet.txt").read()
 lines = open("input.txt").readlines()
 totalPriority = 0
 for i in range(len(lines)):
