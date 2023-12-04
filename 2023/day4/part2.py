@@ -32,4 +32,4 @@ for c in range(len(cards)):
 		cards[c+i+1][2] += card[2] # add the numer of instances of current card to the instances of sequenctial cards
 	total += card[2] # add the number of instances of current card to total
 
-print("Total number of cards: " str(total)
+print("Total number of cards: " + str(total))
