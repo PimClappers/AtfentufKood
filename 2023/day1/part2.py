@@ -58,7 +58,6 @@ for line in lines:
 
 		lengthToSearch = 0
 		found = False
-	print(callibrationValue)
 	total += int(callibrationValue)
 
 print("Total: " + str(total))

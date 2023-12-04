@@ -25,6 +25,5 @@ for card in cards:
 					cardScore = cardScore * 2
 
 	total += cardScore
-	print(cardScore)
 
 print ("total " + str(total))

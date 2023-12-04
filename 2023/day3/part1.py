@@ -47,7 +47,6 @@ for line in range(len(lines)):
                     enginePartValid = True
         else:
             if enginePartValid:
-                print(number)
                 total += int(number)
             number = ""
             enginePartValid = False
