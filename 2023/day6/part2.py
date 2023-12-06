@@ -1,44 +1,20 @@
-import math
+lines = open("input2.txt").readlines()
 
-lines = open("input1.txt").readlines()
+Times = lines[0].split()
+Times.pop(0)
+Distances = lines[1].split()
+Distances.pop(0)
 
-times = lines[0].split()
-times.pop(0)
+total = 1
 
-time = ""
-distance = ""
+for i in range(len(Times)):
+    time = int(Times[i])
+    record = int(Distances[i])
+    nWins = 0
+    for hold in range(time):
+        distance = (time-hold)*hold
+        if distance > record:
+            nWins += 1
+    total = total * nWins
 
-for t in times:
-	time += t
-time = int(time)
-
-distances = lines[1].split()
-distances.pop(0)
-
-for d in distances:
-	distance += d
-distance = int(distance)
-
-minDistance = distance + 1
-
-# minHold = minDistance / (time-2)
-# minHold = math.ceil(minHold)
-
-done = False
-winning = True
-wonOnce = False
-nWins = 0
-hold = 0
-
-traveled = (time-hold)*hold
-
-while not done:
-    traveled = (time-hold)*hold
-    if traveled >= minDistance:
-        wonOnce = True
-        nWins += 1
-    if wonOnce and traveled < minDistance:
-        done = True
-    hold += 1
-
-print("Result: " + str(nWins))
+print("Result: " + str(total))
