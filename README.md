@@ -6,7 +6,7 @@
 | Day 2  | ⭐ | ⭐ |
 | Day 3  | ⭐ | ⭐ |
 | Day 4  | ⭐ | ⭐ |
-| Day 5  | ⭐ |   |
+| Day 5  | ⭐ | ⭐ |
 | Day 6  | ⭐ | ⭐ |
 ## 2022 (Python)
 | Day  | Part 1 | Part 2 |

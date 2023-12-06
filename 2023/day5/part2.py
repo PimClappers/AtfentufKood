@@ -1,27 +1,36 @@
-lines = open("input1.txt").readlines()
+lines = open("input2.txt").readlines()
 seeds = lines[0].split()
 seeds.pop(0)
 
-iterations = 100000000
+def checkIfInSeeds(number):
+	success = False
+	for i in range(int(len(seeds)/2)):
+		seedStartNumber = int(seeds[i*2])
+		seedRangeNumber = int(seeds[i*2+1])
+		if number >= seedStartNumber and number <= seedStartNumber + seedRangeNumber: # check if >+ is correct
+			success = True
+	return success
 
-for i in range(iterations):
-	location = iteration
-	source = location
+
+location = 60560000
+source = location
+done = False
+
+while not done:
 	mappedNumber = 0
 	destinationStart = 0
 	sourceStart = 0
 	rangeLength = 0
 	readingNumbers = False
-
-	done = False
-	j = len(lines) - 1
-	while not done:
-		line = lines[j]
+	readingLines = True
+	i = len(lines) - 1
+	while readingLines:
+		line = lines[i]
 		if len(line.split()) > 0:
 			if readingNumbers:
 				numbers = line.split()
-				destinationStart = int(numbers[0])
-				sourceStart = int(numbers[1])
+				destinationStart = int(numbers[1])
+				sourceStart = int(numbers[0])
 				rangeLength = int(numbers[2])
 
 				if (mappedNumber == 0) and (source >= sourceStart) and (source <= sourceStart + rangeLength):
@@ -41,12 +50,14 @@ for i in range(iterations):
 					mappedNumber = source
 				source = mappedNumber
 				mappedNumber = 0
+		i -= 1
+		if i <= 1:
+			readingLines = False
 
-	locations.append(source)
-	j -= 1
-	if j < 0:
+	if checkIfInSeeds(source):
 		done = True
-locations.sort()
-print(locations[0])
+	else:
+		location += 1
+		source = location
 
-			
+print("Result: " + str(location))

@@ -22,6 +22,7 @@ cd ../day5
 echo
 echo day5
 python3 part1.py
+python3 part2.py
 cd ../day6
 echo
 echo day6
