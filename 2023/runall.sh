@@ -28,4 +28,9 @@ echo
 echo day6
 python3 part1.py
 python3 part2.py
+cd ../day7
+echo
+echo day7
+python3 part1.py
+python3 part2.py
 cd ../
