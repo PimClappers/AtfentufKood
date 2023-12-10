@@ -38,4 +38,8 @@ echo
 echo day8
 python3 part1.py
 python3 part2.py
-cd ../
+cd ../day9
+echo
+echo day9
+python3 part1.py
+python3 part2.py
