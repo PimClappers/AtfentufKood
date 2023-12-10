@@ -1,4 +1,4 @@
-lines = open("input1.txt").read().splitlines(0)
+lines = open("input1.txt").read().splitlines()
 
 trees = []
 
