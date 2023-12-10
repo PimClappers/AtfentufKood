@@ -1,3 +1,5 @@
+import math
+
 lines = open("input1.txt").readlines()
 
 LEFT = "L"
@@ -11,6 +13,7 @@ instructions.pop(len(instructions) - 1)
 
 pairs = [] #name, left, right
 currentNames = []
+goalNames = [] #name, leastNSteps
 
 for line in lines:
 	if line.find("=") > 0:
@@ -21,6 +24,8 @@ for line in lines:
 		pairs.append([pairName, left, right])
 		if pairName[2] == "A":
 			currentNames.append(pairName)
+		if pairName[2] == "Z":
+			goalNames.append([pairName, -1])
 
 steps = 0
 
@@ -38,15 +43,21 @@ while not done:
 						newCurrentNames.append(pair[2])
 		steps += 1
 		currentNames = newCurrentNames
-		allEndWithZ = True
+
 		for currentName in currentNames:
-			if not currentName[2] == "Z":
-				allEndWithZ = False
-		if allEndWithZ:
+			for goalName in goalNames:
+				if currentName == goalName[0] and goalName[1] == -1:
+					goalName[1] = steps
+		
+		success = True
+		for goalName in goalNames:
+			if goalName[1] == -1:
+				success = False
+		
+		if success:
 			done = True
 			break
-		if steps == 10000:
-			print(steps)
 
-print(steps)
+result = math.lcm(goalNames[0][1],goalNames[1][1],goalNames[2][1],goalNames[3][1],goalNames[4][1],goalNames[5][1],)
+print("Result: " + str(result))
 
