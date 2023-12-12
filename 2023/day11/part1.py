@@ -31,7 +31,6 @@ skyMap = linesCopy
 
 for y in range(len(skyMap)):
 	line = skyMap[y]
-	print(line)
 	for x in range(len(line)):
 		character = skyMap[y][x]
 		if character == "#":

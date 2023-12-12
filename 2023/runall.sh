@@ -43,3 +43,13 @@ echo
 echo day9
 python3 part1.py
 python3 part2.py
+cd ../day10
+echo
+echo day10
+python3 part1.py
+cd ../day11
+echo
+echo day11
+python3 part1.py
+python3 part2.py
+cd ../
