@@ -52,4 +52,8 @@ echo
 echo day11
 python3 part1.py
 python3 part2.py
+cd ../day12
+echo
+echo day12
+python3 part1.py
 cd ../
