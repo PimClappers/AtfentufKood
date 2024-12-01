@@ -1,5 +1,9 @@
-# Gotta find them starfruits ey!
-## 2023
+# All my glorious Advent Of Code progress thanks to my striking genius and impeckable coding skills! That's why I still only do these in python. All other languages are not worth my brainpowers.
+## 2024 (Python)
+| Day  | Part 1 | Part 2 |
+| ------------- | ------------- | ------------- |
+| Day 1  | ⭐ | ⭐ |
+## 2023 (Python)
 | Day  | Part 1 | Part 2 |
 | ------------- | ------------- | ------------- |
 | Day 1  | ⭐ | ⭐ |
