@@ -1,20 +1,14 @@
-lines = open("input1.txt").read().splitlines()
+lines = open("input.txt").read().splitlines()
 
 position = 50
 total = 0
 
 for line in lines:
-	startPosition = position
 	direction = line[0]
 	movement = int(line[1:])
-	forward = True
-	if (direction == 'L'):
-		forward = False
-	if (direction == 'R'):
-		forward = True
 
 	for x in range(movement):
-		if (forward):
+		if (direction == 'L'):
 			position += 1
 		else:
 			position -= 1
@@ -27,4 +21,3 @@ for line in lines:
 		if (position == 0):
 			total += 1
 print(total)
-
