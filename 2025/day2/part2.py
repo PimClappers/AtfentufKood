@@ -1,3 +1,6 @@
+import re
+import math
+
 lines = open("input.txt").read().split(',')
 
 total = 0
@@ -8,10 +11,15 @@ for line in lines:
 	currentNumber = startingNumber
 	while(currentNumber != (endNumber+1)):
 		numberString = str(currentNumber)
-		firstPart = numberString[0:int(len(numberString)/2)]
-		secondPart = numberString[int(len(numberString)/2):]
-		if firstPart == secondPart:
-			total = total + currentNumber
+		valid = True
+		for x in range(len(numberString)):
+			subString = numberString[x:]
+			numberOfMatches = len(re.findall(subString, numberString))
+			if (numberOfMatches > 1):
+				if ((len(subString) * numberOfMatches) == len(numberString)):
+					total = total + currentNumber
+					break
 		currentNumber += 1
+		print(str(currentNumber) + "/" + str(endNumber))
 
 print(total)
