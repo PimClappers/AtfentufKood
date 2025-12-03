@@ -1,4 +1,9 @@
-# All my glorious Advent Of Code progress thanks to my striking genius and impeckable coding skills! That's why I still only do these in python. All other languages are not worth my brainpowers.
+# All my glorious Advent Of Code progress thanks to my striking genius and impeckable coding skills! That's why I still only do these in python. All other languages are not worthy of my brainpowers.
+## 2025 2 Stars (Python)
+| Day  | Part 1 | Part 2 |
+| ------------- | ------------- | ------------- |
+| Day 1  | ⭐ | ⭐ |
+
 ## 2024 12 Stars (Python)
 | Day  | Part 1 | Part 2 |
 | ------------- | ------------- | ------------- |
